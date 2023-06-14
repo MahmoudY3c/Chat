@@ -1,0 +1,29 @@
+.app-header {
+  min-height: 100vh;
+  font-size: $--font-size-l;
+  &-gradient {
+    background: $--color-gradient;
+  }
+  &-grid {
+    @extend .grid;
+    @extend .grid-2;
+  }
+  @media screen and (max-width: 800px) {
+    
+  }
+}
+
+.text-container {
+  padding: $--paddding-m;
+  color: $--color-white;
+}
+
+.title {
+  font-size: $--font-size-xl;
+  margin: 20px 0;
+}
+
+.description {
+  font-size: $--font-size-xs;
+  color: $--color-dark-white;
+}

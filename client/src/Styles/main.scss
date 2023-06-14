@@ -1,0 +1,26 @@
+//google font
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&display=swap"); //abstracts Mixins
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@200;300;400;500;600;700&display=swap"); //abstracts Mixins
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;600;700&display=swap"); //abstracts Mixins
+@import "./abstracts/mixin";
+@import "./abstracts/variables";
+@import "./abstracts/display";
+@import "./abstracts/sizes";
+@import "./abstracts/constants";
+
+// base and roots
+@import "./base/reset";
+@import "./base/typography";
+
+// components
+@import './components/nav.scss';
+
+//layouts
+@import "./layout/navbar";
+@import "./layout/footer";
+@import "./layout/header";
+
+//pages
+
+
+// themes

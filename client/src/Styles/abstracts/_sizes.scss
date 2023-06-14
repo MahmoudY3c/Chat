@@ -1,0 +1,16 @@
+.size {
+  height: 4rem;
+  width: 4rem;
+  &-v1 {
+    height: 40vmin;
+    width: 40vmin;
+  }
+  &-s {
+    height: 2rem;
+    width: 2rem;
+  }
+  &-l {
+    height: 3rem;
+    width: 3rem;
+  }
+}
