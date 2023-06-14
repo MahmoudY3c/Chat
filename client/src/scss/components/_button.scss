@@ -1,0 +1,33 @@
+.btn {
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: $--transition;
+  @extend .typo;
+  &--primary {
+    background-color: $--color-white;
+    color: $--color-primary;
+    &:is(:active, :hover, :focus) {
+      background-color: $--color-black;
+      color: $--color-white;
+    }
+  }
+  &--secondary {
+    background-color: $--color-red;
+    color: $--color-white;
+    &:is(:active, :hover, :focus) {
+      border-color: $--color-white;
+      background-color: transparent;
+    }
+  }
+  &--l {
+    padding: $--paddding-xs2 $--paddding-m;
+    @extend .typo-m;
+  }
+  &--m {
+  }
+  &--s {
+  }
+  &--rounded {
+    border-radius: $--paddding-xs1;
+  }
+}

@@ -1,0 +1,54 @@
+.navbar {
+  background-color: transparent;
+  @extend .flex;
+  @extend .flex--center--between;
+  position: fixed;
+  width: 100%;
+  padding-block: $--paddding-s;
+  &__left {
+    display: flex;
+    align-items: center;
+    &__logo {
+      width: 6rem;
+      & img {
+        object-fit: contain;
+      }
+    }
+    &__menu {
+      @include media-prop(display, flex, none, none);
+
+      &__item {
+        padding-inline: $--paddding-m;
+        &__link {
+          color: $--color-white;
+          @extend .typo;
+          @extend .typo-l;
+          @extend .typo--sbold;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    justify-content: center;
+    &__actions {
+      display: flex;
+      margin-left: $--margin-l;
+      &__item {
+        margin-right: $--margin-m;
+        & .btn {
+          @include media-prop(display, flex, none, none);
+        }
+      }
+    }
+    &__mobile-menu {
+      @include media-prop(display, none, flex, flex);
+      cursor: pointer;
+      min-width: 3.2rem;
+      & img {
+        object-fit: contain;
+      }
+    }
+  }
+}

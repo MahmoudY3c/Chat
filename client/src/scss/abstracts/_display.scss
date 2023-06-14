@@ -1,37 +1,50 @@
 .flex {
   display: flex;
 
-  &-center {
+  &--center {
     align-items: center;
     justify-content: center;
 
-    &-col {
+    &--col {
       flex-direction: column;
     }
 
-    &-between {
+    &--between {
       justify-content: space-between;
+      align-items: center;
     }
 
-    &-evenly {
+    &--evenly {
       justify-content: space-evenly;
     }
   }
-
 }
 
 .grid {
   display: grid;
 
-  &-1 {
+  &--1 {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  &-2 {
+  &--2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  &-3 {
+  &--3 {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.gird--3 {
+  display: grid;
+  @include media-prop(grid-template-columns, repeat(3, 1fr), 1fr, 1fr);
+}
+.gird--2 {
+  display: grid;
+  @include media-prop(grid-template-columns, repeat(2, 1fr), 1fr, 1fr);
+}
+.gird--1 {
+  display: grid;
+  grid-template-columns: 1fr;
 }

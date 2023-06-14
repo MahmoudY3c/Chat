@@ -1,0 +1,17 @@
+.mobile-auth {
+  @include media-prop(display, none, flex, flex);
+  @extend .flex--center--col;
+  &__img {
+    max-width: 3rem;
+    margin-bottom: $--margin-xs1;
+    & img {
+      object-fit: contain;
+    }
+  }
+  &__title {
+    color: $--color-white;
+    @extend .typo;
+    @extend .typo-s;
+    @extend .typo--regular;
+  }
+}

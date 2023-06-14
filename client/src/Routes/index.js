@@ -4,7 +4,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Main from "../Pages/Main"
 
-const routes = [
+const ROUTES = [
   {
     path: '/login',
     key: 'login',
@@ -22,4 +22,4 @@ const routes = [
   },
 ]
 
-export default routes
+export default ROUTES

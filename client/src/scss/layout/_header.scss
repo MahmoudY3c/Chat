@@ -1,0 +1,57 @@
+.header {
+  font-size: $--font-size-l;
+  padding-top: 9rem;
+  padding-bottom: $--paddding-m;
+  min-height: calc(90vh - 3rem);
+  background: $--color-gradient;
+  @extend .gird--2;
+  justify-content: space-between;
+  @extend .container;
+  gap: $--margin-m;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__content {
+      text-align: left;
+      &__title {
+        @extend .typo-3xl;
+        @extend .typo--bold;
+        color: $--color-white;
+        @include media-prop(margin-bottom, 4.5rem, 1.6rem, 1.6rem);
+      }
+      &__description {
+        line-height: 1.5;
+        @extend .typo-l;
+        color: $--color-dark-white;
+        @include media-prop(width, 65%, 100%, 100%);
+        @include media-prop(margin-bottom, 4.5rem, 1.6rem, 1.6rem);
+      }
+      &__actions {
+        display: flex;
+        @include media-prop(justify-content, start, center, center);
+        @include media-prop(margin-block, "", $--margin-m, $--margin-m);
+
+        &__item {
+          &:not(:first-child) {
+            margin-left: $--margin-m;
+          }
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__img {
+      @include media-prop(width, 50rem, 30rem, 20rem);
+      // margin-left: auto;
+      & img {
+        object-fit: contain;
+      }
+    }
+  }
+}

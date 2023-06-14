@@ -1,12 +1,12 @@
 :root {
   // colors
-  --color-primary: #0D6EFD;
+  --color-primary: #0d6efd;
   --color-white: #fff;
   --color-black: #000;
-  --color-dark-white: #DDDDDD;
+  --color-dark-white: #dddddd;
   --color-grey: #777777;
-  --color-red: #D71E1E;
-  --color-black-light: #282C34;
+  --color-red: #d71e1e;
+  --color-black-light: #282c34;
   --color-purple: rgb(49, 23, 119);
   --color-gradient: linear-gradient(
     207deg,
@@ -93,6 +93,7 @@ $--font-size-l: var(--font-size-l);
 $--font-size-xl: var(--font-size-xl);
 $--font-size-2xl: var(--font-size-2xl);
 $--font-size-3xl: var(--font-size-3xl);
+$--font-cairo: var(--font-cairo);
 
 // transitions
 $--transition: var(--transition);

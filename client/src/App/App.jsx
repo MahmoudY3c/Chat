@@ -1,10 +1,8 @@
-
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import routes from '../Routes';
+import routes from "../Routes";
 
-//roboto fonts for MUI 
+//roboto fonts for MUI
 // import '@fontsource/roboto/300.css';
 // import '@fontsource/roboto/400.css';
 // import '@fontsource/roboto/500.css';
@@ -13,11 +11,11 @@ import routes from '../Routes';
 function App() {
   return (
     <Router>
-        <Routes>
-          {routes.map((route) => (
-            <Route key={route.key} element={route.Element} path={route.path} />
-          ))}
-        </Routes>
+      <Routes>
+        {routes.map((route) => (
+          <Route key={route.key} element={route.Element} path={route.path} />
+        ))}
+      </Routes>
     </Router>
   );
 }

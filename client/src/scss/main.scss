@@ -5,15 +5,14 @@
 @import "./abstracts/mixin";
 @import "./abstracts/variables";
 @import "./abstracts/display";
-@import "./abstracts/sizes";
-@import "./abstracts/constants";
 
 // base and roots
 @import "./base/reset";
 @import "./base/typography";
 
 // components
-@import './components/nav.scss';
+@import "./components/mobilenavaction";
+@import "./components/button";
 
 //layouts
 @import "./layout/navbar";
@@ -21,6 +20,6 @@
 @import "./layout/header";
 
 //pages
-
+@import "./pages/main.scss";
 
 // themes
