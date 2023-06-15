@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import plusIcon from '../../assests/plus-circle.svg'
 
 const FaqRaw = (props) => {
+  const [open, setOpen] = useState(false)
+  const content = useRef()
   return (
-    <li className="faq__raw">
+    <div className="faq__raw">
       <div className="faq__raw__container">
-        <div className="faq__raw__container__icon">
+        <div className="faq__raw__container__icon" onClick={() => open ? setOpen(false) : setOpen(true)}>
           <img src={plusIcon} alt="faq raw icon" />
         </div>
         <div className="faq__raw__container__title">
@@ -13,13 +15,15 @@ const FaqRaw = (props) => {
         </div>
       </div>
       <div className="faq__raw__container" style={{
-        height: props.open ? 'auto' : 20
+        maxHeight: open ? content.current ? content.current.scrollHeight + 'px' : null : 0,
+        height: 'auto',
+        overflow: "hidden",
       }}>
-        <div className="faq__raw__container__description">
+        <div className="faq__raw__container__description" ref={content}>
           {props.answer}
         </div>
       </div>
-    </li>
+    </div>
   );
 };
 

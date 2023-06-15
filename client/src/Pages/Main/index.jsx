@@ -7,6 +7,9 @@ import chatImg from '../../assests/Rectangle 5_1.png';
 import chatImg2 from '../../assests/Rectangle 5_2.png';
 import chatImg3 from '../../assests/Rectangle 5_3.png';
 import FaqRaw from "../../components/FaqRaw/FaqRaw";
+import FAQ from '../../JSON/FAQ';
+import Footer from "../../Layouts/Footer/Footer";
+
 function Main(props) {
   return (
     <>
@@ -70,24 +73,21 @@ function Main(props) {
         <SectionTitle
           title="FAQ"
         />
-        <ol className="section__faq__container">
-          <FaqRaw
-            question="here's a question"
-            answer="Your customers have questions before they buy. Be where they are, when they need you, so they have the confidence they need to choose you over the competition. Every time."
-          />
-          <FaqRaw
-            question="here's a question"
-            answer="Your customers have questions before they buy. Be where they are, when they need you, so they have the confidence they need to choose you over the competition. Every time."
-          />
-          <FaqRaw
-            question="here's a question"
-            answer="Your customers have questions before they buy. Be where they are, when they need you, so they have the confidence they need to choose you over the competition. Every time."
-          />
-        </ol>
-      </section>
-      <footer className="--color-primary --padding-xl">
+        <div className="section__faq__container">
+          {
+            FAQ.map((e, i) => (
+                <FaqRaw
+                  question={`${i+1}. ${e.question}`}
+                  answer={e.answer}
+                  key={i}
+                />
+              )
+            )
+          }
 
-      </footer>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 }
