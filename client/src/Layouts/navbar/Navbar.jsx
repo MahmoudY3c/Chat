@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../assests/email 3.png";
 import login from "../../assests/login.svg";
 import signup from "../../assests/user.svg";
@@ -8,8 +8,19 @@ import ROUTES from "../../Routes";
 import { Link } from "react-router-dom";
 
 function Nav() {
+  const [bg, setBg] = useState('')
+  function changeBg(e) {
+    if (window.scrollY >= document.querySelector('header').offsetHeight - document.querySelector('nav').offsetHeight) setBg("navbar--active")
+    else setBg('')
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeBg)
+    return () => window.removeEventListener('scroll', changeBg)
+  }, []);
+
   return (
-    <nav className="navbar container">
+    <nav className={`navbar container ${bg}`}>
       <div className="navbar__left">
         <div className="navbar__left__logo">
           <img src={Logo} alt="logo" />

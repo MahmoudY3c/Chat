@@ -1,0 +1,22 @@
+.faq__raw {
+  // background-color: rgb(113, 80, 203);
+  &__container {
+    @extend .flex;
+    position: relative;
+    &__icon {
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      right: $--paddding-s;
+    }
+    &__title, &__description {
+      margin: 0 $--margin-m;
+    }
+    &__title {
+      
+    }
+    &__description {
+      
+    }
+  }
+}
