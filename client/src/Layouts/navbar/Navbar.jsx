@@ -8,15 +8,15 @@ import ROUTES from "../../Routes";
 import { Link } from "react-router-dom";
 
 function Nav() {
-  const [bg, setBg] = useState('')
+  const [bg, setBg] = useState("");
   function changeBg(e) {
-    if (window.scrollY >= document.querySelector('header').offsetHeight - document.querySelector('nav').offsetHeight) setBg("navbar--active")
-    else setBg('')
+    if (window.scrollY >= 50) setBg("navbar--active");
+    else setBg("");
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', changeBg)
-    return () => window.removeEventListener('scroll', changeBg)
+    window.addEventListener("scroll", changeBg);
+    return () => window.removeEventListener("scroll", changeBg);
   }, []);
 
   return (

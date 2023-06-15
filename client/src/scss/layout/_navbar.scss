@@ -4,11 +4,13 @@
   @extend .flex--center--between;
   position: fixed;
   width: 100%;
-  padding-block: $--paddding-s;
+  // padding-block: $--paddding-xs1;
   transition: $--transition;
   z-index: 99;
+
   &--active {
     background-color: $--color-primary;
+    box-shadow: 1px 2px 8px $--color-grey;
   }
   &__left {
     display: flex;

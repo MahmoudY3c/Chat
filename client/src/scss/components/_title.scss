@@ -3,6 +3,7 @@
   margin: $--margin-m;
   &__title {
     @extend .typo-3xl;
+    @extend .typo--bold;
   }
   &__description {
     @extend .typo-l;

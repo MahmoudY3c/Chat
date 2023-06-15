@@ -1,12 +1,12 @@
 .card-content {
   text-align: center;
   border-radius: 5px;
-  border: 1px solid $--color-grey;
+  border: 1px solid $--color-dark-white;
+
   @extend .flex;
   @extend .flex--center;
   @extend .flex--center--col;
-  padding: $--paddding-l $--paddding-m;
-  margin: $--margin-m $--margin-l;
+  padding: $--paddding-m;
 
   &--shadow {
     border: 0;
@@ -19,6 +19,18 @@
     flex-direction: row;
     padding: 20px;
     justify-content: space-around;
+    box-shadow: none;
+    & .card-content__container__description {
+      @include media-prop(width, 60%, 100%, 100%);
+      line-height: 1.2;
+    }
+    & .card-content__container {
+      @include media-prop(text-align, start, center, center);
+    }
+    & .card-content__container__img {
+      filter: drop-shadow(1px 1px 1px #ddd);
+      border-radius: $--paddding-m;
+    }
   }
 
   &__container {
@@ -27,16 +39,21 @@
     &__img {
       @extend .flex;
       @extend .flex--center;
-      height: 25rem;
-      width: 25rem;
+      max-height: 25rem;
+      max-width: 25rem;
     }
 
     &__title {
       font-size: $--font-size-2xl;
+      @extend .typo--sbold;
+      line-height: 1.2;
+      @include media-prop(margin-block, "nil", $--margin-s, $--margin-s);
     }
 
     &__description {
       font-size: $--font-size-s;
+      color: $--color-grey;
+      @extend .typo--medium;
     }
   }
 }

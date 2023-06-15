@@ -3,19 +3,22 @@
   margin: 10px 0;
   text-transform: capitalize;
   font-size: $--font-size-s;
-  border: 1px solid;
+  border: 1px solid $--color-dark-white;
   padding: 10px 20px;
-
+  transition: $--transition;
+  &:hover {
+    border-color: $--color-grey;
+  }
   &__container {
     position: relative;
     transition: max-height 0.2s ease-out;
-    
+    cursor: pointer;
+
     &__icon {
       height: 2rem;
       width: 2rem;
       position: absolute;
       right: $--paddding-s;
-      cursor: pointer;
 
       &:hover {
         background-color: $--color-dark-white;

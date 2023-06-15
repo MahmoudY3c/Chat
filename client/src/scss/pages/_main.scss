@@ -6,7 +6,7 @@
     @extend .flex--center;
     @include media-prop(flex-direction, row, column, column);
 
-    &>.card-content {
+    & > .card-content {
       @include media-prop(flex, 1, initial, initial);
       width: 30rem;
       margin: $--margin-s;
@@ -14,14 +14,11 @@
   }
 
   &__features__card__container {
-    &>.card-content {
+    & > .card-content {
       @include media-prop(flex-direction, row, column, column);
       text-align: left;
       &:nth-child(even) {
         @include media-prop(flex-direction, row-reverse, column, column);
-      }
-      & > div {
-        margin: 0 20px;
       }
     }
   }
