@@ -7,8 +7,8 @@
     @include media-prop(flex-direction, row, column, column);
 
     &>.card-content {
-      @include media-prop(flex, 1, inherit, inherit);
-      width: 40rem;
+      @include media-prop(flex, 1, initial, initial);
+      width: 30rem;
       margin: $--margin-s;
     }
   }

@@ -6,6 +6,7 @@
   width: 100%;
   padding-block: $--paddding-s;
   transition: $--transition;
+  z-index: 99;
   &--active {
     background-color: $--color-primary;
   }
