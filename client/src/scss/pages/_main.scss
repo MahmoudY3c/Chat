@@ -5,9 +5,13 @@
     @extend .flex;
     @extend .flex--center;
     @include media-prop(flex-direction, row, column, column);
+    flex-wrap: wrap;
+    gap: $--paddding-xs2;
+    align-items: stretch;
 
     & > .card-content {
-      @include media-prop(flex, 1, initial, initial);
+      @include media-prop(flex, 2, inherit, inherit);
+      gap: $--paddding-xs2;
       width: 30rem;
       margin: $--margin-s;
     }
@@ -19,6 +23,9 @@
       text-align: left;
       &:nth-child(even) {
         @include media-prop(flex-direction, row-reverse, column, column);
+      }
+      & > .card-content__container {
+        margin: 0 20px;
       }
     }
   }
